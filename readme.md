@@ -1,32 +1,36 @@
-# Instalación de Odoo 16 con docker-compose
-### Requisitos
-* Tener instalado docker y docker-compose
+<h1> <b> Taller de Jenkins </b> </h1>
 
-### Pasos
-1. Duplicar y renombrar: 
-    * Duplicar copy.odoo-postgres.docker-compose.yaml y renombrar la copia con el nombre docker-compose.yaml.
-    * Duplicar copy.env y renombrar la copia con el nombre .env.
-    * Duplicar odoo.conf.copy y renombrar la copia con el nombre odoo.conf.
+![Jenkins](https://img.shields.io/badge/Jenkins-gray?style=flat-square&logo=jenkins)
+![Docker](https://img.shields.io/badge/Docker-gray?style=flat-square&logo=docker)
+![Angular](https://img.shields.io/badge/Angular-gray?style=flat-square&logo=angular)
+![AWS](https://img.shields.io/badge/AWS-gray?style=flat-square&logo=amazon-aws)
 
-    Es importante no editar ni renombrar los archivos que contengan el nombre la palabra copy, ya que estos forman parte de tu plantilla.
-2. Establece los parámetros de tu instancia en el archivo .env
-3. Establece los parámetros de tu instancia en el archivo config/odoo.conf
-    * los parámetros DB_HOST,DB_PASSWD y DB_USER, se establecen en .env. Estos tambien se configuran en el archivo odoo.conf 
-    * Si estas en producción el parámetro ADMIN_PASSWD de odoo.conf debe ser uno seguro, ya que con este parámetro se gestionan las base de datos.
-4. Ejecución con docker-compose
-En la misma raiz del proyecto donde se encuentra docker-compose.yaml, debes ejecutar:
-    * La primera vez descargará las imagenes de odoo y postgres, esto puede demorar varios minutos.
-    * Las siguientes ejecuciones deberá demorar solo segundos para iniciarse.
+<h2> Descripción </h2>
 
-    ~~~~
-    docker-compose up -d
-    ~~~~
-    
-    
-5. Ingresa a Odoo
-    * El parámetro WEB_PORT lo definiste en el archivo .env
-    * Ingresa a localhost:<WEB_PORT>
-    * Siendo la primera vez que ingresas al sistema, el sistema te mostrará un formulario para que puedas crear una base de datos.
+Bienvenidos a este taller de Jenkins, donde encontrarás una guía básica sobre la herramienta de CI/CD Jenkins, información sobre la instalación utilizando Docker y como implementar un pipeline, conectado a Github.
 
-### Contáctanos
-Si has tenido alguna dificultad en alguno de estos pasos o tienes consultas, puedes contactarnos al correo hola@bigodoo.com y con gusto te brindaremos una asesoría.
+<h2> Contenido </h2>
+
+- [01 - Instalación Jenkins](https://github.com/LuisArana631/Taller_Kubernetes)
+- [02 - Pipeline](https://github.com/LuisArana631/Taller_Kubernetes)
+
+
+<h2> Requisitos </h2>
+
+Para realizar el siguiente ejemplo, utilizaremos container con Jenkins instalado.
+
+También se utilizarán las siguientes herramientas:
+
+- Editor a elección (Sublime Text, Visual Studio Code, Atom)
+- Docker
+- Framework Angular
+- Jenkins
+- AWS
+
+<h2> Enlaces a herramientas utilizadas </h2>
+
+- <a href="https://www.docker.com/"><img alt="Docker" src="https://img.shields.io/badge/Docker-gray?style=for-the-badge&logo=docker"></a>
+- <a href="https://hub.docker.com/"><img alt="Docker" src="https://img.shields.io/badge/Docker_hub-gray?style=for-the-badge&logo=docker"></a>
+- <a href="https://code.visualstudio.com/"><img alt="Docker" src="https://img.shields.io/badge/Visual_Studio_Code-gray?style=for-the-badge&logo=visualstudiocode"></a>
+- <a href="https://www.jenkins.io/"><img alt="Docker" src="https://img.shields.io/badge/Jenkins-gray?style=for-the-badge&logo=jenkins"></a>
+- <a href="https://angular.io/"><img alt="Docker" src="https://img.shields.io/badge/Angular-gray?style=for-the-badge&logo=angular"></a>
