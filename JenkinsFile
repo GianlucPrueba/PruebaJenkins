@@ -1,0 +1,29 @@
+pipeline{
+    agent any
+    environment{
+        INSTRAGRAM_BASTIDAS="@dfBastidas"
+    }
+    stages{
+        stage("saludo 1"){
+            steps{
+                echo "Hola Desde Saludo 1"
+            }
+        }
+        stage("saludo 2"){
+            steps{
+                echo "Hola Desde Saludo 2, paso 1"
+                echo "Hola Desde Saludo 2, paso 2"
+            }
+        }
+        stage("Imprimir Varibales"){
+            steps{
+                echo "${env. INSTRAGRAM_BASTIDAS}"
+                echo "${INSTRAGRAM_BASTIDAS}"
+                echo "$INSTRAGRAM_BASTIDAS"
+                
+                sh "echo 'hola mundo' "
+
+            }
+        }
+    }
+}
